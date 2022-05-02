@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from './Image'
 export default function Avatar({ name, picture }) {
   return (
     <div className="flex items-center">
