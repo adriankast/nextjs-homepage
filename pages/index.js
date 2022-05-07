@@ -7,7 +7,8 @@ import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import Link from "next/link"
 
-export default function Index({ allPosts }) {
+export default function Index ( { allPosts } )
+{
   return (
     <>
       <Layout>
@@ -15,9 +16,23 @@ export default function Index({ allPosts }) {
           <title>Welcome 👋</title>
         </Head>
         <Container>
-        <Link href={`/posts`}>
-              <a className="hover:underline">To the posts</a>
-            </Link>
+          <header>
+            <nav>
+              <div className='flex py-4 justify-end gap-4'>
+                <div>
+                  <Link href={`/about`}>
+                    About
+                  </Link>
+                </div>
+                <div>
+                  <Link href={`/posts`}>
+                    Blog
+                  </Link>
+                </div>
+              </div>
+            </nav>
+          </header>
+
           <Intro />
         </Container>
       </Layout>
