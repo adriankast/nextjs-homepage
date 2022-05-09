@@ -10,7 +10,6 @@ import Link from "next/link"
 export default function Index() {
   return (
     <>
-      <Layout>
         <Head>
           <title>About 👋</title>
         </Head>
@@ -32,7 +31,6 @@ export default function Index() {
         ...
           <Intro />
         </Container>
-      </Layout>
     </>
   )
 }

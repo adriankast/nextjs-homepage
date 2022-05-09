@@ -11,7 +11,6 @@ export default function Index({ allPosts }) {
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <Layout>
         <Head>
           <title>Blog Posts</title>
         </Head>
@@ -29,7 +28,6 @@ export default function Index({ allPosts }) {
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
-      </Layout>
     </>
   );
 }

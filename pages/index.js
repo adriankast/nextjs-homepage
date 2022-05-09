@@ -11,7 +11,6 @@ export default function Index ( { allPosts } )
 {
   return (
     <>
-      <Layout>
         <Head>
           <title>Welcome 👋</title>
         </Head>
@@ -35,7 +34,6 @@ export default function Index ( { allPosts } )
 
           <Intro />
         </Container>
-      </Layout>
     </>
   )
 }

@@ -1,16 +1,16 @@
 ---
-title: '1. Blog Post - recent dev learnings'
-excerpt: 'New year new things to try...I thought about blogging for quite some time and yet never found the time or muse to get started...but here it is - my first blog post 🎉. It is entirely about my recent learnings in frontend development (Typescript/React) and probably not too sophisticated since I’m effectively working with React since a year. I plan on doing future posts like this but might also cover other topics and would highly appreciate any feedback 🙏 and also reading about related learnings you’ve made.'
-coverImage: '/assets/blog/preview/cover.jpg'
-date: '2022-01-09T05:35:07.322Z'
+title: "1. Blog Post - recent dev learnings"
+excerpt: "New year new things to try...I thought about blogging for quite some time and yet never found the time or muse to get started...but here it is - my first blog post 🎉. It is entirely about my recent learnings in frontend development (Typescript/React) and probably not too sophisticated since I’m effectively working with React since a year. I plan on doing future posts like this but might also cover other topics and would highly appreciate any feedback 🙏 and also reading about related learnings you’ve made."
+coverImage: "/assets/blog/preview/cover.jpg"
+date: "2022-01-09T05:35:07.322Z"
 author:
   name: Adrian Kast
-  picture: '/assets/blog/authors/joe.jpeg'
+  picture: "/assets/blog/authors/joe.jpeg"
 ogImage:
-  url: '/assets/blog/preview/cover.jpg'
+  url: "/assets/blog/preview/cover.jpg"
 ---
 
-New year new things to try...I thought about blogging for quite some time and yet never found the time or muse to get started...but here it is - my first blog post 🎉. It is entirely about my recent learnings in frontend development (Typescript/React) and probably not too sophisticated since I’m effectively working with React since a year. I plan on doing future posts like this but might also cover other topics and would highly appreciate any feedback 🙏 and also reading about related learnings you’ve made. *January 9, 2022*
+New year new things to try...I thought about blogging for quite some time and yet never found the time or muse to get started...but here it is - my first blog post 🎉. It is entirely about my recent learnings in frontend development (Typescript/React) and probably not too sophisticated since I’m effectively working with React since a year. I plan on doing future posts like this but might also cover other topics and would highly appreciate any feedback 🙏 and also reading about related learnings you’ve made. _January 9, 2022_
 
 **Topics**:
 
@@ -20,9 +20,9 @@ I’ve seen this pattern in different versions repeatedly (I think for example a
 
 It applies to components that involve server communication, the example deals with fetching and displaying a Todo card.
 
-```tsx
-const ToDoCard = ({id}: {id: string}) => {
-  const {data, error, loading} = useServerToDoCard(id);
+```javascript
+const ToDoCard = ({ id }: { id: string }) => {
+  const { data, error, loading } = useServerToDoCard(id);
 
   return (
     <BannerOrContent hasError={error} isLoading={loading}>
@@ -31,8 +31,8 @@ const ToDoCard = ({id}: {id: string}) => {
         <div>{data.description}</div>
       </div>
     </BannerOrContent>
-  )
-}
+  );
+};
 ```
 
 In the example you can see that all server calls, state management and reaction to fetch status changes are hidden in the component. This can be achieved by letting the `useServerToDoCard` hook take care of:
@@ -51,7 +51,6 @@ and an additional `BannerOrContent` component that will display hints to the use
 # Npm update strategy
 
 > TLDR; The following section describes the required commands and my strategy for updating npm dependencies. At the end you will find a small outlook to what can be automated.
-> 
 
 ## npm outdated
 
@@ -68,7 +67,7 @@ Showing only the packages that have updates/upgrades available.
 Since it is very time consuming to update every used package then run all tests then correct stuff, I mostly update a few packages at once. The number of packages bundled for updating depends on how likely changes will break something, e.g., if updating the react core package → no other package updated but if updating some `@types` type definitions → up to 10 packages at once. Another hint for batching is to group packages that are related, e.g., if I update react also updating react-dom obviously makes sense (yes even if it is two updates batched then).
 
 <aside>
-💡 Another approach I frequently use to speed up finding errors after updates is running the typescript compiler (without generating output). It takes ways less time than running all tests (or building with webpack) and catches most problems. 
+💡 Another approach I frequently use to speed up finding errors after updates is running the typescript compiler (without generating output). It takes ways less time than running all tests (or building with webpack) and catches most problems.
 
 Command: `tsc tsconfig.json --noEmit`
 
@@ -91,12 +90,11 @@ In general everything that can break after an update should run once in a while,
 
 ## 🤖 automations
 
-To continuously keep dependencies up to date you can check out the [Dependabot](https://github.com/dependabot/dependabot-core) project, it is integrated into GitHub/GitLab and creates PullRequests/MergeRequests with updated dependencies. This is probably the optimal case to achieve real CD. If you’re looking for a solution that requires less effort/maintenance (for example if your developing a product that isn’t even released yet) a pattern I find useful is to write a simple script for CI/CD that you can trigger manually. That script uses the output of npm outdated ( `npm outdated --json > output-file.json` [see example output](https://gist.github.com/adriankast/da642549df400a7a4e843cc4f5e280d3)), checks whether there are updates available (you also check for both, semver and latest) and creates a new CI/CD job for each possible update, which simply installs the updated package, then runs npm test. If you trigger the script you should get a good overview of which updates cause problems for sure (and can update the other ones in large batches). 
+To continuously keep dependencies up to date you can check out the [Dependabot](https://github.com/dependabot/dependabot-core) project, it is integrated into GitHub/GitLab and creates PullRequests/MergeRequests with updated dependencies. This is probably the optimal case to achieve real CD. If you’re looking for a solution that requires less effort/maintenance (for example if your developing a product that isn’t even released yet) a pattern I find useful is to write a simple script for CI/CD that you can trigger manually. That script uses the output of npm outdated ( `npm outdated --json > output-file.json` [see example output](https://gist.github.com/adriankast/da642549df400a7a4e843cc4f5e280d3)), checks whether there are updates available (you also check for both, semver and latest) and creates a new CI/CD job for each possible update, which simply installs the updated package, then runs npm test. If you trigger the script you should get a good overview of which updates cause problems for sure (and can update the other ones in large batches).
 
 # Prefer ?? over ||
 
-> **Always use the nullish coalescing operator `??`  instead of the OR operator `||` to provide a fallback value.**
-> 
+> **Always use the nullish coalescing operator `??` instead of the OR operator `||` to provide a fallback value.**
 
 ## why
 
