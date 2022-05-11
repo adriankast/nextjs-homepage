@@ -1,5 +1,6 @@
 import Container from './container'
 import { EXAMPLE_PATH } from '../lib/constants'
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -10,19 +11,12 @@ export default function Footer() {
             Legal
           </h3>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
+            <span
               className="mx-3 font-bold hover:underline"
-            >
-              Imprint
-            </a>
+            ><Link href="/imprint">Imprint</Link>
+            </span>
             <span className='mx-3 font-bold text-xl'>x</span>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              Privacy
-            </a>
+            <span className="mx-3 font-bold hover:underline"><Link href="/privacy">Privacy</Link></span>
           </div>
         </div>
       </Container>
