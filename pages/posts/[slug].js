@@ -8,15 +8,20 @@ import Layout from '../../components/layout'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
+
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 
-export default function Post({ post, morePosts, preview }) {
+// TODO: add tsx highlighting, fine-tune prism
+export default function Post ( { post, morePosts, preview } )
+{
   const router = useRouter()
-  if (!router.isFallback && !post?.slug) {
+  if ( !router.isFallback && !post?.slug )
+  {
     return <ErrorPage statusCode={404} />
   }
-  return (
+  return ( 
+  <>
     <Layout preview={preview}>
       <Container>
         <Header />
@@ -30,6 +35,7 @@ export default function Post({ post, morePosts, preview }) {
                   {post.title} | Next.js Blog Example with {CMS_NAME}
                 </title>
                 <meta property="og:image" content={post.ogImage.url} />
+                <link href="/prism/prism.css" rel="stylesheet" />
               </Head>
               <PostHeader
                 title={post.title}
@@ -43,11 +49,14 @@ export default function Post({ post, morePosts, preview }) {
         )}
       </Container>
     </Layout>
+    <script src="/prism/prism.js"></script>
+  </>
   )
 }
 
-export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
+export async function getStaticProps ( { params } )
+{
+  const post = getPostBySlug( params.slug, [
     'title',
     'date',
     'slug',
@@ -55,8 +64,8 @@ export async function getStaticProps({ params }) {
     'content',
     'ogImage',
     'coverImage',
-  ])
-  const content = await markdownToHtml(post.content || '')
+  ] )
+  const content = await markdownToHtml( post.content || '' )
 
   return {
     props: {
@@ -68,17 +77,19 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+export async function getStaticPaths ()
+{
+  const posts = getAllPosts( [ 'slug' ] )
 
   return {
-    paths: posts.map((post) => {
+    paths: posts.map( ( post ) =>
+    {
       return {
         params: {
           slug: post.slug,
         },
       }
-    }),
+    } ),
     fallback: false,
   }
 }

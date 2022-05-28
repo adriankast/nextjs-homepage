@@ -20,7 +20,7 @@ I’ve seen this pattern in different versions repeatedly (I think for example a
 
 It applies to components that involve server communication, the example deals with fetching and displaying a Todo card.
 
-```javascript
+```typescript
 const ToDoCard = ({ id }: { id: string }) => {
   const { data, error, loading } = useServerToDoCard(id);
 
@@ -109,7 +109,7 @@ Assuming the default value is type number and we don’t want 0 to be treated as
 const currentValue = defaultValue ?? 1;
 
 // error-prone ❌
-const currentValue = defaultValue ?? 1;
+const currentValue = defaultValue || 1;
 ```
 
 ## details
