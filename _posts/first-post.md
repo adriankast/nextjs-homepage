@@ -20,7 +20,7 @@ I’ve seen this pattern in different versions repeatedly (I think for example a
 
 It applies to components that involve server communication, the example deals with fetching and displaying a Todo card.
 
-```typescript
+```tsx
 const ToDoCard = ({ id }: { id: string }) => {
   const { data, error, loading } = useServerToDoCard(id);
 
