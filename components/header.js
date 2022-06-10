@@ -6,6 +6,11 @@ export default function Header() {
       <nav>
         <div className="flex justify-end gap-8 pt-6 pr-12 text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight">
           <div>
+            <Link href={`/`}>
+              <a className="hover:underline">Home</a>
+            </Link>
+          </div>
+          <div>
             <Link href={`/about`}>
               <a className="hover:underline">About</a>
             </Link>
