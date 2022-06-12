@@ -1,12 +1,17 @@
 import Header from "../components/header";
-import Layout from "../components/layout";
+import Footer from '../components/footer'
+import Meta from '../components/meta'
 import "../styles/index.css";
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Header />
+    <>
+          <Meta />
+    <div className="grid min-h-screen" style={{ gridTemplateRows: "auto 1fr"}}>
+    <Header />
       <Component {...pageProps} />
-    </Layout>
+    </div>
+    <Footer />
+    </>
   );
 }
