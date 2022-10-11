@@ -14,8 +14,8 @@ export default function About() {
             <li>
               built with <a href="https://nextjs.org/">Next.js</a>
             </li>
-            <li>this template</li>
-            <li>notion and manual export for blog posts</li>
+            <li>this template</li>{/* TODO: add link*/}
+            <li><a href="https://www.notion.so/">notion</a> and manual export for blog posts</li>
             <li>
               <a href="https://prismjs.com/">prism</a> for code highlighting
             </li>
@@ -23,7 +23,7 @@ export default function About() {
 
           <h1>About me</h1>
           <ul>
-            <li>first</li>
+            <li>Likes to tinker with tech - (M.Sc. Electrical Engineering & Information Technology)</li>
             <li>second</li>
           </ul>
         </main>
