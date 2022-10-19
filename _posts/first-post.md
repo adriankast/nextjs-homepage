@@ -56,7 +56,7 @@ and an additional `BannerOrContent` component that will display hints to the use
 
 When updating npm dependencies the most useful command is `npm outdated` it lists all available updates when comparing the installed npm packages to the allowed semantic versioning newest release and the latest release of the package. Running the command should result in an output like:
 
-![Command line output after running `npm outdated` (skipped location column)](assets/posts/../../../public/assets/blog/first-post/Untitled.png)
+![Command line output after running `npm outdated` (skipped location column)](assets/posts/../../../assets/blog/first-post/Untitled.png)
 
 Command line output after running `npm outdated` (skipped location column)
 

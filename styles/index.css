@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+    @apply text-3xl font-bold;
+}
+
+h2 {
+    @apply text-lg font-bold;
+}
+
+p {
+    @apply m-3;
+}
+
+ul li {
+@apply list-disc;
+}
+
+a {
+    @apply underline-offset-2 underline;
+}
+
+a:hover {
+    @apply underline-offset-0;
+}

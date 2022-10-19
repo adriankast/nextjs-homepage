@@ -1,5 +1,7 @@
 import LegalLayout from "../components/legal-layout";
 
+// Update
+
 export default function Privacy() {
   return (
     <LegalLayout>

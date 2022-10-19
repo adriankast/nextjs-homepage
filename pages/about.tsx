@@ -9,23 +9,52 @@ export default function About() {
       </Head>
       <Container>
         <main>
-          <h1>About this website</h1>
-          <ul>
-            <li>
-              built with <a href="https://nextjs.org/">Next.js</a>
-            </li>
-            <li>this template</li>{/* TODO: add link*/}
-            <li><a href="https://www.notion.so/">notion</a> and manual export for blog posts</li>
-            <li>
-              <a href="https://prismjs.com/">prism</a> for code highlighting
-            </li>
-          </ul>
+          <h1>About</h1>
+          <p>
+            <h2>this website</h2>
+            <ul>
+              <li>
+                built with <a href="https://nextjs.org/">Next.js</a>
+              </li>
+              <li>
+                <a href="https://github.com/vercel/next.js/tree/canary/examples/blog-starter">
+                  this template
+                </a>
+              </li>
+              <li>
+                <a href="https://www.notion.so/">notion</a> and manual export
+                for blog posts
+              </li>
+              <li>
+                <a href="https://prismjs.com/">prism</a> for code highlighting
+              </li>
+            </ul>
+          </p>
 
-          <h1>About me</h1>
-          <ul>
-            <li>Likes to tinker with tech - (M.Sc. Electrical Engineering & Information Technology)</li>
-            <li>second</li>
-          </ul>
+          <p>
+            <h2>me (I):</h2>
+            <ul>
+              <li>
+                Like to tinker with tech - (M.Sc. Electrical Engineering &amp;
+                Information Technology)
+              </li>
+              <li>
+                Work as Software Engineer at{" "}
+                <a href="https://www.msg.group/">msg</a>
+              </li>
+              <li>Love my fiancée</li>
+              <li>Am a voluntary firefighter</li>
+              <li>Am interested in company founding and indie hacking</li>
+              <li>
+                Like many sports, e.g., biking, running, skiing, sailing,
+                fitness, sometimes tennis, ...
+              </li>
+              <li>
+                Would love to hear from you, contact methods are at the site
+                bottom 👇
+              </li>
+            </ul>
+          </p>
         </main>
       </Container>
     </>
