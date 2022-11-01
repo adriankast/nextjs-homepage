@@ -3,9 +3,6 @@ title: "1. Blog Post - recent dev learnings"
 excerpt: "New year new things to try...I thought about blogging for quite some time and yet never found the time or muse to get started...but here it is - my first blog post 🎉. It is entirely about my recent learnings in frontend development (Typescript/React) and probably not too sophisticated since I’m effectively working with React since a year. I plan on doing future posts like this but might also cover other topics and would highly appreciate any feedback 🙏 and also reading about related learnings you’ve made."
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2022-01-09T05:35:07.322Z"
-author:
-  name: Adrian Kast
-  picture: "/assets/blog/authors/joe.jpeg"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
