@@ -8,9 +8,8 @@ TODO: add about website information
 
 - Update Privacy statement
 - Add second blog post and remove old ones
-- Add cover image for the first blog post
 - Publish?
 - favicon
 - logo
-- Inspect image width optimization
+- Inspect image width optimization & fix image resizing for cover-images
 - Further styling
