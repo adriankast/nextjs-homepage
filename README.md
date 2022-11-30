@@ -6,7 +6,6 @@ TODO: add about website information
 
 ## TODOs
 
-- Update Privacy statement
 - Add second blog post and remove old ones
 - Publish?
 - favicon
