@@ -28,6 +28,9 @@ export default function About() {
               <li>
                 <a href="https://prismjs.com/">prism</a> for code highlighting
               </li>
+              <li>
+                lives <a href="https://github.com/adriankast/nextjs-homepage">here</a>
+              </li>
             </ul>
           </p>
 

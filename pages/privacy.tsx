@@ -6,164 +6,70 @@ export default function Privacy() {
       <main>
         <h1>Datenschutzerklärung</h1>
         <div>
-          <h1>Datenschutzerklärung</h1>
+          <h2>Verantwortlich im Sinne der DSGVO ist</h2>
           <p>
-            Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der
-            EU-Datenschutzgrundverordnung (DSGVO), ist:
+            <ul>
+              <li>Adrian Kast</li>
+              <li>Luitpoldstr. 39</li>
+              <li>82211 Herrsching</li>
+              <li>info@adriankast.de</li>
+            </ul>
           </p>
-          <p>Adrian Kast</p>
-          <h2>Ihre Betroffenenrechte</h2>
+          <h2>Hosting</h2>
           <p>
-            Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten
-            können Sie jederzeit folgende Rechte ausüben:
+            Sofern Sie sich als Besucher weder registrieren noch einloggen,
+            erheben wir in sog. Logfiles folgende Daten, die Ihr Browser
+            übermittelt: IP-Adresse, Datum und Uhrzeit der Anfrage,
+            Zeitzonendifferenz zur Greenwich Mean Time, Inhalt der Anforderung,
+            HTTP-Statuscode, übertragene Datenmenge, Website, von der die
+            Anforderung kommt und Informationen zu Browser und Betriebssystem.
+            Mehr dazu hier. Das ist erforderlich, um unsere Website anzuzeigen
+            und die Stabilität und Sicherheit zu gewährleisten. Dies entspricht
+            unserem berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit.
+            f DSGVO. Wir setzen für die Zurverfügungstellung unserer Website
+            folgenden Hoster ein. STRATO AG Pascalstraße 10 10587 Berlin Dieser
+            ist Empfänger Ihrer personenbezogenen Daten und als
+            Auftragsverarbeiter für uns tätig. Dies entspricht unserem
+            berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit. f DSGVO,
+            selbst keinen Server in unseren Räumlichkeiten vorhalten zu müssen.
+            Serverstandort ist Deutschland. Weitere Informationen zu
+            Widerspruchs- und Beseitigungsmöglichkeiten gegenüber Strato finden
+            Sie unter: https://www.strato.de/datenschutz/ Sie haben das Recht
+            der Verarbeitung zu widersprechen. Ob der Widerspruch erfolgreich
+            ist, ist im Rahmen einer Interessenabwägung zu ermitteln. Alle
+            personenbezogenen Daten werden nach einem Ablauf von 7 Tagen
+            gelöscht. Die Verarbeitung der unter diesem Abschnitt angegebenen
+            Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Die
+            Funktionsfähigkeit der Website ist ohne die Verarbeitung nicht
+            gewährleistet. Um Ihnen ein besonders hohes Maß an Schutz der
+            erfassten Daten zusichern zu können, haben wir auch einen Vertrag
+            zur Auftragsdatenverarbeitung mit der Strato AG abgeschlossen.
           </p>
-          <ul>
-            <li>
-              Auskunft über Ihre bei uns gespeicherten Daten und deren
-              Verarbeitung (Art. 15 DSGVO),
-            </li>
-            <li>
-              Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),
-            </li>
-            <li>Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),</li>
-            <li>
-              Einschränkung der Datenverarbeitung, sofern wir Ihre Daten
-              aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18
-              DSGVO),
-            </li>
-            <li>
-              Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21
-              DSGVO) und
-            </li>
-            <li>
-              Datenübertragbarkeit, sofern Sie in die Datenverarbeitung
-              eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben
-              (Art. 20 DSGVO).
-            </li>
-          </ul>
+          <h2>Kontaktaufnahme</h2>
           <p>
-            Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese
-            jederzeit mit Wirkung für die Zukunft widerrufen.
-          </p>
-          <p>
-            Sie können sich jederzeit mit einer Beschwerde an eine
-            Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde
-            des Bundeslands Ihres Wohnsitzes oder an die für uns als
-            verantwortliche Stelle zuständige Behörde.
-          </p>
-          <p>
-            Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich)
-            mit Anschrift finden Sie unter:{" "}
-            <a
-              href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
-              target="_blank"
-              rel="nofollow noopener"
-            >
-              https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html
-            </a>
+            Wenn sie per Email oder Telefon Kontakt zu uns aufnehmen, bzw. sich
+            als Kunde oder Testkunde anmelden speichern wir Ihre übermittelten
+            Daten solange dies zur Erbringung unserer Leistungen bzw. der
+            Bearbeitung Ihrer Anfrage notwendig ist. Betroffenenrechte Sie haben
+            als betroffene Person, das Recht auf Auskunft, das Recht auf
+            Berichtigung oder Löschung, das Recht auf Einschränkung der
+            Verarbeitung und das Recht auf Widerspruch gegen die Verarbeitung
+            Ihrer Daten. Sofern Sie uns eine Einwilligung erteilt haben, können
+            Sie diese jederzeit mit Wirkung für die Zukunft widerrufen. Bitte
+            richten Sie Ihren Widerspruch oder Widerruf formlos an die oben
+            genannten Kontaktmöglichkeiten. Darüber hinaus haben Sie das Recht
+            auf Datenübertragbarkeit. Sie haben weiter das Recht, sich bei einer
+            Aufsichtsbehörde über die Verarbeitung zu beschweren. Eine Liste der
+            entsprechenden Behörden finden Sie unter:
+            https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html
             .
           </p>
-          <p></p>
-          <h2>
-            Erfassung allgemeiner Informationen beim Besuch unserer Website
-          </h2>
-          <h3>Art und Zweck der Verarbeitung:</h3>
           <p>
-            Wenn Sie auf unsere Website zugreifen, d.h., wenn Sie sich nicht
-            registrieren oder anderweitig Informationen übermitteln, werden
-            automatisch Informationen allgemeiner Natur erfasst. Diese
-            Informationen (Server-Logfiles) beinhalten etwa die Art des
-            Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres
-            Internet-Service-Providers, Ihre IP-Adresse und ähnliches.{" "}
+            Diese Datenschutzerklärung wurde mithilfe von https://opr.vc
+            erstellt.
           </p>
-          <p>Sie werden insbesondere zu folgenden Zwecken verarbeitet:</p>
-          <ul>
-            <li>
-              Sicherstellung eines problemlosen Verbindungsaufbaus der Website,
-            </li>
-            <li>Sicherstellung einer reibungslosen Nutzung unserer Website,</li>
-            <li>Auswertung der Systemsicherheit und -stabilität sowie</li>
-            <li>zu weiteren administrativen Zwecken.</li>
-          </ul>
           <p>
-            Wir verwenden Ihre Daten nicht, um Rückschlüsse auf Ihre Person zu
-            ziehen. Informationen dieser Art werden von uns ggfs. statistisch
-            ausgewertet, um unseren Internetauftritt und die dahinterstehende
-            Technik zu optimieren.
-          </p>
-          <h3>Rechtsgrundlage:</h3>
-          <p>
-            Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis
-            unseres berechtigten Interesses an der Verbesserung der Stabilität
-            und Funktionalität unserer Website.
-          </p>
-          <h3>Empfänger:</h3>
-          <p>
-            Empfänger der Daten sind ggf. technische Dienstleister, die für den
-            Betrieb und die Wartung unserer Webseite als Auftragsverarbeiter
-            tätig werden.
-          </p>
-          <h3>Speicherdauer:</h3>
-          <p>
-            Die Daten werden gelöscht, sobald diese für den Zweck der Erhebung
-            nicht mehr erforderlich sind. Dies ist für die Daten, die der
-            Bereitstellung der Webseite dienen, grundsätzlich der Fall, wenn die
-            jeweilige Sitzung beendet ist.
-          </p>
-          <h3>Bereitstellung vorgeschrieben oder erforderlich:</h3>
-          <p>
-            Die Bereitstellung der vorgenannten personenbezogenen Daten ist
-            weder gesetzlich noch vertraglich vorgeschrieben. Ohne die
-            IP-Adresse ist jedoch der Dienst und die Funktionsfähigkeit unserer
-            Website nicht gewährleistet. Zudem können einzelne Dienste und
-            Services nicht verfügbar oder eingeschränkt sein. Aus diesem Grund
-            ist ein Widerspruch ausgeschlossen.{" "}
-          </p>
-          <p></p>
-          <h2>SSL-Verschlüsselung</h2>
-          <p>
-            Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen,
-            verwenden wir dem aktuellen Stand der Technik entsprechende
-            Verschlüsselungsverfahren (z. B. SSL) über HTTPS.
-          </p>
-          <p></p>
-          <h2>Eingesetzte Auftragsverarbeiter</h2>
-          <p>
-            Folgende Organisationen, Unternehmen bzw. Personen wurden vom
-            Betreiber dieser Website mit der Verarbeitung von Daten beauftragt:
-          </p>
-          <br />
-          Hoster:
-          <br />
-          STRATO AG
-          <br />
-          Pascalstraße 10
-          <br />
-          10587 Berlin
-          <p>
-            <h2>Änderung unserer Datenschutzbestimmungen</h2>
-            <p>
-              Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit
-              sie stets den aktuellen rechtlichen Anforderungen entspricht oder
-              um Änderungen unserer Leistungen in der Datenschutzerklärung
-              umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren
-              erneuten Besuch gilt dann die neue Datenschutzerklärung.
-            </p>
-            <h2>Fragen an den Datenschutzbeauftragten</h2>
-            <p>
-              Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte
-              eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz
-              verantwortliche Person in unserer Organisation:
-            </p>
-            <p>
-              <a href="mailto:info@adriankast.de">info@adriankast.de</a>
-            </p>
-            <p>
-              <em>
-                Die Datenschutzerklärung wurde mithilfe der activeMind AG
-                erstellt.(Version #2019-04-10).
-              </em>
-            </p>
+            Stand 30.11.2022
           </p>
         </div>
       </main>
