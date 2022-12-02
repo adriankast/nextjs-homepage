@@ -11,7 +11,7 @@ export default function SocialConnect() {
   return (
     <div className="flex gap-1 bg-gray-200 rounded-full w-max">
       <div className="w-16 h-16 rounded-full border-4">
-        <Avatar src="/assets/blog/authors/adrian.jpg" size={64} />
+        <Avatar src="/assets/profile/adrian.jpg" size={64} />
       </div>
       <div className="flex items-center z-10">
         <SocialLink title="Write a mail" link="mailto:info@adriankast.de">

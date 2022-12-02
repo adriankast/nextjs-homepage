@@ -31,7 +31,7 @@ export default function Post ( { post, morePosts, preview } )
                 <title>
                   {post.title} | Adrian's Blog
                 </title>
-                <meta property="og:image" content={post.ogImage.url} />
+                <meta property="og:image" content={post.ogImageUrl} />
                 <link href="/prism/prism.css" rel="stylesheet" />
               </Head>
               <PostHeader
@@ -57,7 +57,7 @@ const postMetaData = [
   'slug',
   'author',
   'content',
-  'ogImage',
+  'ogImageUrl',
   'coverImage',
 ] as const;
 
@@ -67,7 +67,7 @@ type PostMetaDataKeysT =
 |'slug'
 |'author'
 |'content'
-|'ogImage'
+|'ogImageUrl'
 |'coverImage'
 
 

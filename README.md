@@ -6,9 +6,12 @@ TODO: add about website information
 
 ## TODOs
 
-- Add second blog post and remove old ones
+- blog post width (& go back button?)
 - Publish?
+- automate github publish
 - favicon
 - logo
+- automate unzipping etc. of blog posts
 - Inspect image width optimization & fix image resizing for cover-images
 - Further styling
+- use notion api
