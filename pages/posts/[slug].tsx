@@ -9,6 +9,7 @@ import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 
 import markdownToHtml from '../../lib/markdownToHtml'
+import Link from 'next/link'
 
 // TODO: add tsx highlighting, fine-tune prism
 export default function Post ( { post, morePosts, preview } )
@@ -42,6 +43,7 @@ export default function Post ( { post, morePosts, preview } )
               />
               <PostBody content={post.content} />
             </article>
+            
           </>
         )}
       </Container>
