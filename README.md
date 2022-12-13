@@ -4,6 +4,8 @@
 
 TODO: add about website information
 
+- The favicons were generated with [RealFaviconGenerator](https://realfavicongenerator.net/)
+
 ## TODOs
 
 - Publish?
