@@ -2,15 +2,13 @@
 
 ## About
 
-TODO: add about website information
-
 - The favicons were generated with [RealFaviconGenerator](https://realfavicongenerator.net/)
 
 ## TODOs
 
+- add about website information to Readme
 - Publish?
 - automate github publish
-- favicon
 - logo
 - automate unzipping etc. of blog posts
 - Inspect image width optimization & fix image resizing for cover-images
