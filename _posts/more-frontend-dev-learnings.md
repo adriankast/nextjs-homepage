@@ -16,7 +16,7 @@ Some more frontend dev learnings, some inspired by learning from [web.dev](https
 
 ## **Set image width & height in html**
 
-I always thought setting the image width and height in CSS is the proper way to do it and setting it in html is just a deprecated way of doing it. But I recently learned that there is a huge advantage of setting it also in html, because the Browser can respect the aspect ratio of the image before it has actually loaded and thus avoid unnecessary layout shifts. 
+I always thought setting the image width and height in CSS is the proper way to do it and setting it in html is just a deprecated way of doing it. But I recently learned that there is a huge advantage of setting it also in html, because the Browser can respect the aspect ratio of the image before it has actually loaded and thus avoid unnecessary layout shifts.
 You can see it in this [REPL](https://replit.com/@adriankast/ShowcaseHtmlImgWidthHeight#index.html). Recently there is also a CSS property that allows to define the aspect ratio explicit and seems to have browser support from all new versions of major browsers ([aspect-ratio on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)).
 
 ## **Format an Array in a locale way**
