@@ -2,11 +2,11 @@
 
 title: More frontend dev learnings
 
-excerpt: Some more frontend dev learnings, some inspired by learning from [web.dev](https://web.dev). This post was ready since quite a time, but I really wanted to get my site running with NextJS first and to simplify the whole publishing workflow (which is still kind of a work in progress tho). So finally my Site is ready (enough) to publish it 🎉. As always feedback is very much appreciated and I hope to be able to ship posts much more frequently from now on.
+excerpt: Some more frontend dev learnings, some inspired by learning from web.dev. This post was ready since quite a time, but I really wanted to get my site running with NextJS first and to simplify the whole publishing workflow (which is still kind of a work in progress tho). So finally my Site is ready (enough) to publish it 🎉. As always feedback is very much appreciated and I hope to be able to ship posts much more frequently from now on.
 
 coverImage: /assets/blog/more-frontend-dev-learnings/cover.jpg
 
-date: "2022-12-02T06:35:07.322Z"
+date: "2022-12-18T06:35:07.322Z"
 
 ogImageUrl: /assets/blog/more-frontend-dev-learnings/cover.jpg
 
@@ -82,3 +82,5 @@ So what is the accent color about? Letting you use the browser defined input ele
 ```
 
 ![accentColorResult.png](/assets/blog/more-frontend-dev-learnings/accentColorResult.png)
+
+You can find the source (Notion page) of this blog post [here](https://adriankast.notion.site/More-frontend-dev-learnings-01ddd2337b4943f98fb3989064dbc09c) and also comment on it 🙂

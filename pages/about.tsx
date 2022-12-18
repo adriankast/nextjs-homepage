@@ -11,7 +11,7 @@ export default function About() {
         <main>
           <h1>About</h1>
           <p>
-            <h2>this website</h2>
+            <h2>this website:</h2>
             <ul>
               <li>
                 built with <a href="https://nextjs.org/">Next.js</a>

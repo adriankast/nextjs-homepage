@@ -2,12 +2,20 @@
 
 ## About
 
+- built with [Next.js](https://nextjs.org/)
+- [this template](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
+- [notion](https://www.notion.so/) and manual markdown export
+for blog posts
+- [prism](https://prismjs.com/) for code highlighting
+- lives [here](https://github.com/adriankast/nextjs-homepage)
 - The favicons were generated with [RealFaviconGenerator](https://realfavicongenerator.net/)
 
 ## TODOs
 
-- add about website information to Readme
 - Publish?
+- add post source
+- derive cover image
+- add cover image info
 - automate github publish
 - logo
 - automate unzipping etc. of blog posts
@@ -16,3 +24,4 @@
   - vercel loading spinner
   - own blog footer instead of just "go back"
 - use notion api
+- analytics
