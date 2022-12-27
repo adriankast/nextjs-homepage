@@ -40,4 +40,4 @@ jobs:
       env:
         SFTP_HOST: ${{ secrets.SFTP_HOST }}
         SSHPASS: ${{ secrets.SFTP_PASS }}
-      run: cd $GITHUB_WORKSPACE/out && sshpass -e sftp "$SFTP_HOST" <<< $"put -r . ./"
+      run: cd $GITHUB_WORKSPACE/out && sshpass -e sftp "$SFTP_HOST" <<< $"put -r . ./asdf"
