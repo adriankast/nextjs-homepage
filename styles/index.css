@@ -25,3 +25,7 @@ a {
 a:hover {
     @apply underline-offset-0;
 }
+
+a:hover[aria-disabled=true] {
+    @apply underline-offset-2;
+}
