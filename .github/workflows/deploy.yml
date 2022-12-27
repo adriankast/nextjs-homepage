@@ -25,13 +25,17 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
     
-    - name: Build static output
-    - uses: actions/setup-node@v1
+    - name: Setup Node
+      uses: actions/setup-node@v1
       with:
         node-version: 18
-    - run: npm ci
-    - run: npm run build
     
+    - name: Install node modules
+      run: npm ci
+
+    - name: Build Nextjs static output
+      run: npm run build
+
     - name: Deploy put sftp
       env:
         SFTP_HOST: ${{ secrets.SFTP_HOST }}
