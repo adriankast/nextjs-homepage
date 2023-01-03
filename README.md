@@ -12,14 +12,12 @@ for blog posts
 
 ## TODOs
 
-- Publish?
+- Inspect image width optimization & fix image resizing for cover-images
 - add post source
 - derive cover image
 - add cover image info
-- automate github publish
 - logo
 - automate unzipping etc. of blog posts
-- Inspect image width optimization & fix image resizing for cover-images
 - Further styling
   - vercel loading spinner
   - own blog footer instead of just "go back"
