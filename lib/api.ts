@@ -25,8 +25,17 @@ export function getPostBySlug(slug, fields = []) {
       items[field] = content
     }
 
+
     if (typeof data[field] !== 'undefined') {
       items[field] = data[field]
+    }
+
+    // fallback values
+    if (field === 'coverImage') {
+      items[field] = data.coverImage ?? `/assets/blog/${realSlug}/cover.jpg`
+    }
+    if (field === 'ogImageUrl') {
+      items[field] = data.ogImageUrl ?? (data.coverImage ?? `/assets/blog/${realSlug}/cover.jpg`)
     }
   })
 

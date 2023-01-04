@@ -12,14 +12,12 @@ for blog posts
 
 ## TODOs
 
-- Inspect image width optimization & fix image resizing for cover-images
-- add post source
-- derive cover image
-- add cover image info
+- add post (gh?) source
+- add email signup
 - logo
-- automate unzipping etc. of blog posts
 - Further styling
   - vercel loading spinner
   - own blog footer instead of just "go back"
-- use notion api
+  - code style
+- Inspect image width optimization & fix image resizing for cover-images
 - analytics

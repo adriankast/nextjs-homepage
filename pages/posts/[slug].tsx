@@ -7,11 +7,8 @@ import Layout from '../../components/layout'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
-
 import markdownToHtml from '../../lib/markdownToHtml'
-import Link from 'next/link'
 
-// TODO: add tsx highlighting, fine-tune prism
 export default function Post ( { post, morePosts, preview } )
 {
   const router = useRouter()
@@ -32,14 +29,15 @@ export default function Post ( { post, morePosts, preview } )
                 <title>
                   {post.title} | Adrian's Blog
                 </title>
-                <meta property="og:image" content={post.ogImageUrl} />
+                <meta key={"og:image"} property="og:image" content={post.ogImageUrl} />
                 <link href="/prism/prism.css" rel="stylesheet" />
               </Head>
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
-                slug={post.slug}
+                coverImageInfo={post.coverImageInfo}
+                coverImageUrl={post.coverImageUrl}
               />
               <PostBody content={post.content} />
             </article>
@@ -61,6 +59,8 @@ const postMetaData = [
   'content',
   'ogImageUrl',
   'coverImage',
+  'coverImageInfo',
+  'coverImageUrl'
 ] as const;
 
 type PostMetaDataKeysT = 
@@ -71,6 +71,8 @@ type PostMetaDataKeysT =
 |'content'
 |'ogImageUrl'
 |'coverImage'
+|'coverImageInfo'
+|'coverImageUrl'
 
 
 type PostMetaDataT = {

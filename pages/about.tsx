@@ -10,8 +10,7 @@ export default function About() {
       <Container>
         <main>
           <h1>About</h1>
-          <p>
-            <h2>this website:</h2>
+            <h2 className="pt-4">this website:</h2>
             <ul>
               <li>
                 built with <a href="https://nextjs.org/">Next.js</a>
@@ -29,13 +28,16 @@ export default function About() {
                 <a href="https://prismjs.com/">prism</a> for code highlighting
               </li>
               <li>
-                lives <a href="https://github.com/adriankast/nextjs-homepage">here</a>
+                <a href="https://primer.style/octicons/">Octicons</a> as icon
+                library
+              </li>
+              <li>
+                lives{" "}
+                <a href="https://github.com/adriankast/nextjs-homepage">here</a>
               </li>
             </ul>
-          </p>
 
-          <p>
-            <h2>me (I):</h2>
+            <h2 className="pt-4">me (I):</h2>
             <ul>
               <li>
                 Like to tinker with tech - (M.Sc. Electrical Engineering &amp;
@@ -57,7 +59,6 @@ export default function About() {
                 bottom 👇
               </li>
             </ul>
-          </p>
         </main>
       </Container>
     </>

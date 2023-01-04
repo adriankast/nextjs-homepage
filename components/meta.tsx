@@ -36,7 +36,7 @@ export default function Meta() {
         name="description"
         content={`The digital home of Adrian`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta key="og:image" property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   );
 }
