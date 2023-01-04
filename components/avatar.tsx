@@ -1,8 +1,8 @@
 import Image from './Image'
 
 interface Props {
-  src: String;
-  size: Number
+  src: string;
+  size: number
 }
 
 export default function Avatar({ src, size }: Props) {
