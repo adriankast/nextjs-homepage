@@ -1,6 +1,7 @@
 ---
 title: "1. Blog Post - recent dev learnings"
 excerpt: "New year new things to try...I thought about blogging for quite some time and yet never found the time or muse to get started...but here it is - my first blog post 🎉. It is entirely about my recent learnings in frontend development (Typescript/React) and probably not too sophisticated since I’m effectively working with React since a year. I plan on doing future posts like this but might also cover other topics and would highly appreciate any feedback 🙏 and also reading about related learnings you’ve made."
+coverImage: /assets/blog/first-post/cover.png
 coverImageInfo: generated with carbon
 coverImageUrl: https://carbon.now.sh/
 date: "2022-01-09T05:35:07.322Z"
@@ -52,7 +53,7 @@ and an additional `BannerOrContent` component that will display hints to the use
 
 When updating npm dependencies the most useful command is `npm outdated` it lists all available updates when comparing the installed npm packages to the allowed semantic versioning newest release and the latest release of the package. Running the command should result in an output like:
 
-![Command line output after running `npm outdated` (skipped location column)](assets/posts/../../../assets/blog/first-post/Untitled.png)
+![Command line output after running `npm outdated` (skipped location column)](/assets/blog/first-post/Untitled.png)
 
 Command line output after running `npm outdated` (skipped location column)
 
