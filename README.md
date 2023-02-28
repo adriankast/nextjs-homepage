@@ -13,6 +13,8 @@ for blog posts
 ## TODOs
 
 - add post (gh?) source
+    - https://github.com/adriankast/nextjs-homepage/issues/new/choose
+    - https://github.com/adriankast/nextjs-homepage/blob/main/_posts/backup-strategy.md
 - add email signup
 - logo
 - Further styling
