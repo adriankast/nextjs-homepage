@@ -21,5 +21,6 @@ for blog posts
   - vercel loading spinner
   - own blog footer instead of just "go back"
   - code style
+- check responsiveness especially contact section & posts
 - Inspect image width optimization & fix image resizing for cover-images
 - analytics
