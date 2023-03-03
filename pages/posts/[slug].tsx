@@ -8,6 +8,7 @@ import { getPostBySlug, getAllPosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
+import PostFooter from '../../components/post-footer'
 
 export default function Post ( { post, morePosts, preview } )
 {
@@ -40,6 +41,7 @@ export default function Post ( { post, morePosts, preview } )
                 coverImageUrl={post.coverImageUrl}
               />
               <PostBody content={post.content} />
+              <PostFooter source={post.source} />
             </article>
             
           </>
@@ -60,8 +62,9 @@ const postMetaData = [
   'ogImageUrl',
   'coverImage',
   'coverImageInfo',
-  'coverImageUrl'
-] as const;
+  'coverImageUrl',
+  'source'
+];
 
 type PostMetaDataKeysT = 
 'title'
@@ -73,6 +76,7 @@ type PostMetaDataKeysT =
 |'coverImage'
 |'coverImageInfo'
 |'coverImageUrl'
+|'source'
 
 
 type PostMetaDataT = {
@@ -81,7 +85,7 @@ type PostMetaDataT = {
 
 export async function getStaticProps ( { params } )
 {
-  const post: PostMetaDataT = getPostBySlug( params.slug, postMetaData as unknown as string[] ) as PostMetaDataT;
+  const post: PostMetaDataT = getPostBySlug( params.slug, postMetaData) as PostMetaDataT;
   const content = await markdownToHtml( post.content || '' )
 
   return {

@@ -12,14 +12,13 @@ for blog posts
 
 ## TODOs
 
-- add post (gh?) source
-    - https://github.com/adriankast/nextjs-homepage/issues/new/choose
-    - https://github.com/adriankast/nextjs-homepage/blob/main/_posts/backup-strategy.md
+- fix footer styling on mobile blog
 - add email signup
 - logo
 - Further styling
   - vercel loading spinner
-  - own blog footer instead of just "go back"
+  - style blog footer
   - code style
+- Share Option for blog footer
 - Inspect image width optimization & fix image resizing for cover-images
 - analytics

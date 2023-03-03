@@ -4,6 +4,7 @@ excerpt: As a developer, working with Git, Docker, and Shell is a very common ta
 coverImageInfo: Image from Hector Martinez on unsplash
 coverImageUrl: https://unsplash.com/de/fotos/EG49vTtKdvI
 date: "2023-02-28T08:10Z"
+source: https://www.notion.so/adriankast/Command-Line-Essentials-b9f2fb7e9f8a4cd2988ca28a033a354b
 ---
 
 As a developer, working with Git, Docker, and Shell is a very common task. The command-line interface can be intimidating for beginners, but it is a powerful tool that can save time and streamline workflows. In this blog post, we will cover essential commands that I needed a lot recently and will help you as a developer to make your work more efficient and effective.

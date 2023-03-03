@@ -4,6 +4,7 @@ excerpt: The time around the holidays is also a time of backups for me. I’ve a
 coverImageInfo: Image from christels on pixabay
 coverImageUrl: https://pixabay.com/de/photos/feuerwerk-pyrotechnik-explodieren-1880042/
 date: "2023-01-04T06:10Z"
+source: https://www.notion.so/adriankast/Backup-Strategy-c5733372759b4c69bd01028663eaabb6
 ---
 
 The time around the holidays is also a time of backups for me. I’ve automated my most important backup mechanisms. Still I keep some manual backup routines that are hard to automate and I don’t want to spent too much time with. So I execute them once or twice a year and one time is always between the years. This post shares my whole backup strategy.
