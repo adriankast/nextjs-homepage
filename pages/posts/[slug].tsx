@@ -10,7 +10,7 @@ import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
 import PostFooter from '../../components/post-footer'
 
-export default function Post ( { post, morePosts, preview } )
+export default function Post ( { post } )
 {
   const router = useRouter()
   if ( !router.isFallback && !post?.slug )
@@ -19,7 +19,7 @@ export default function Post ( { post, morePosts, preview } )
   }
   return ( 
   <>
-    <Layout preview={preview}>
+    <Layout>
       <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
@@ -43,7 +43,6 @@ export default function Post ( { post, morePosts, preview } )
               <PostBody content={post.content} />
               <PostFooter source={post.source} />
             </article>
-            
           </>
         )}
       </Container>

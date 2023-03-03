@@ -12,7 +12,7 @@ for blog posts
 
 ## TODOs
 
-- fix footer styling on mobile blog
+- check responsiveness especially contact section & posts
 - add email signup
 - logo
 - Further styling
