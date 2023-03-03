@@ -11,7 +11,7 @@ export default function PostFooter({ source }: Props) {
       <ul>
         <li className="list-none">
           <Link href={source}>
-            <a className="hover:underline m-4 font-bold"><CrossReferenceIcon /> Comment this Post on Notion</a>
+            <a className="hover:underline m-4 font-bold" target="_blank"><CrossReferenceIcon /> Comment this Post on Notion</a>
           </Link>
         </li>
         <li className="list-none">
