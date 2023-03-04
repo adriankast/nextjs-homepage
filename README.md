@@ -12,13 +12,12 @@ for blog posts
 
 ## TODOs
 
-- check responsiveness especially contact section & posts
+- Share Option for blog footer
 - add email signup
 - logo
 - Further styling
   - vercel loading spinner
   - style blog footer
   - code style
-- Share Option for blog footer
 - Inspect image width optimization & fix image resizing for cover-images
 - analytics
