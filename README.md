@@ -13,10 +13,10 @@ for blog posts
 ## TODOs
 
 - Share Option for blog footer
+- linkedIn logo
 - add email signup
 - logo
 - Further styling
-  - vercel loading spinner
   - style blog footer
   - code style
 - Inspect image width optimization & fix image resizing for cover-images
