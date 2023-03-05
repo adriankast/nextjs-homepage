@@ -21,3 +21,4 @@ for blog posts
   - code style
 - Inspect image width optimization & fix image resizing for cover-images
 - analytics
+- dark mode

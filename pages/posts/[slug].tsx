@@ -31,7 +31,8 @@ export default function Post ( { post } )
                   {post.title} | Adrian's Blog
                 </title>
                 <meta key={"og:image"} property="og:image" content={post.ogImageUrl} />
-                <link href="/prism/prism.css" rel="stylesheet" />
+                <link href="/prism/prism-vs.css" rel="stylesheet" />
+                <link href="/prism/prismMenu.css" rel="stylesheet" />
               </Head>
               <PostHeader
                 title={post.title}
