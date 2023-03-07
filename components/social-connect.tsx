@@ -1,7 +1,7 @@
 import {
   DeviceMobileIcon,
   MailIcon,
-  MarkGithubIcon,
+  MarkGithubIcon
 } from "@primer/octicons-react";
 import Avatar from "./avatar";
 import Image from "./Image";
@@ -27,7 +27,7 @@ export default function SocialConnect() {
           title="Connect via LinkedIn"
           link="https://www.linkedin.com/in/adriankast/"
         >
-          LI
+          <Image src="/assets/icons/linked-in.png" width={20} height={16} alt="LinkedIN Logo" style={{marginRight: "-2px"}}/>
         </SocialLink>
       </div>
     </div>
