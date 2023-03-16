@@ -13,7 +13,6 @@ for blog posts
 ## TODOs
 
 - Share Option for blog footer
-- linkedIn logo
 - add email signup
 - logo
 - Further styling
