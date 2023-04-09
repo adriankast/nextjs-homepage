@@ -27,7 +27,13 @@ Once the SFTP account is set up, you can check that it works by uploading you we
 
 After the SFTP credentials are created you should make sure that it is also possible to connect to your webspace via the CLI (Command Line Interface). Especially if you plan to use other commands than shown in the GitHub actions workflow, e.g., because you want to exclude certain directories. Since the feedback loop is much shorter I recommend testing these commands from your local terminal first.
 
-To test that the programmatic access works in general: From a terminal (or PowerShell/WSL if you’re on windows) make sure you have the `sftp` command installed and try to connect to the SFTP login you just created. For Strato the necessary command should look like this: `sftp "[sftp_user_name@your_domain_name.de](mailto:sftp_ff_gallery@adriankast.de)@ssh.strato.de"` . It will then ask for your password and once you’ve entered it, you should be connected to your webspace, and be able to execute SFTP commands like `pwd`.
+To test that the programmatic access works in general: From a terminal (or PowerShell/WSL if you’re on windows) make sure you have the `sftp` command installed and try to connect to the SFTP login you just created. For Strato the necessary command should look like this: 
+
+```shell
+sftp "sftp_user_name@your_domain_name.de@ssh.strato.de"
+```
+
+It will then ask for your password and once you’ve entered it, you should be connected to your webspace, and be able to execute SFTP commands like `pwd`.
 
 After finding the commands that have the publishing behavior you want to achieve, let’s automate the workflow with GitHub actions.
 
