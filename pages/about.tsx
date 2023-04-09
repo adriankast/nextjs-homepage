@@ -35,6 +35,7 @@ export default function About() {
                 lives{" "}
                 <a href="https://github.com/adriankast/nextjs-homepage">here</a>
               </li>
+              <li>automatically deployed on git push, read more in <a href="https://adriankast.de/posts/website-publishing-workflow/">this post</a></li>
             </ul>
 
             <h2 className="pt-4">me (I):</h2>
