@@ -1,13 +1,13 @@
 ---
 title: Next.JS as API Proxy
-excerpt: In my current side-project I could not access and API from the client, since the CORS-headers prohibited cross-origin requests. But I still wanted to use the API and display its data in a way that is different than what the vendor provided iframe does. That lead me to using Next.JS as an API Proxy. Actually more or less, since I’m also converting the data with the API route, it is not strictly limited to proxying the request, but it’s the main purpose.
+excerpt: In my current side-project I could not access an API from the client, since the CORS-headers prohibited cross-origin requests. But I still wanted to use the API and display its data in a way that is different than what the vendor provided iframe does. That lead me to using Next.JS as an API Proxy. Actually more or less, since I’m also converting the data with the API route, it is not strictly limited to proxying the request, but it’s the main purpose.
 coverImage: /assets/blog/nextjs-as-api-proxy/cover.png
 coverImageInfo: Self created
 date: "2023-05-09T08:35Z"
 source: https://adriankast.notion.site/Next-JS-as-API-Proxy-e3e32bf7aaf14bab827058f773023c00
 ---
 
-In my current side-project I could not access and API from the client, since the CORS-headers prohibited cross-origin requests. But I still wanted to use the API and display its data in a way that is different than what the vendor provided iframe does. That lead me to using Next.JS as an API Proxy. Actually more or less, since I’m also converting the data with the API route, it is not strictly limited to proxying the request, but it’s the main purpose.
+In my current side-project I could not access an API from the client, since the CORS-headers prohibited cross-origin requests. But I still wanted to use the API and display its data in a way that is different than what the vendor provided iframe does. That lead me to using Next.JS as an API Proxy. Actually more or less, since I’m also converting the data with the API route, it is not strictly limited to proxying the request, but it’s the main purpose.
 
 ## TLDR;
 
