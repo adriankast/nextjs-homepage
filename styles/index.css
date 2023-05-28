@@ -19,11 +19,11 @@ ul li {
 }
 
 a {
-    @apply underline-offset-2 underline;
+    @apply underline-offset-4 underline;
 }
 
 a:hover {
-    @apply underline-offset-0;
+    @apply underline-offset-2;
 }
 
 a:hover[aria-disabled=true] {

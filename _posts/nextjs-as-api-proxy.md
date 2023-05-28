@@ -45,7 +45,7 @@ Overall, Next.JS as an API proxy is a powerful feature that can improve the perf
 
 ## My side project
 
-I want to display statistics (yearly, monthly, daily) for missions of a voluntary fire department with a little widget on the homepage of the fire department. 
+I want to display statistics (yearly, monthly, daily) for missions of a voluntary fire department with a little widget on the homepage of the fire department.
 
 But the vendor of the mission management software only provides an iframe that shows a large table together with a diagram that does not fit my needs. Since there is no CORS-header set that allows using the API from other origins, I came up with the Proxy API as an solution.
 

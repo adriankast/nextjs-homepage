@@ -12,7 +12,6 @@ for blog posts
 
 ## TODOs
 
-- Share Option for blog footer
 - add email signup
 - logo
 - Further styling
