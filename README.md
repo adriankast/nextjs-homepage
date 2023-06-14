@@ -18,5 +18,3 @@ for blog posts
   - style blog footer
   - code style
 - Inspect image width optimization & fix image resizing for cover-images
-- analytics
-- dark mode

@@ -37,6 +37,7 @@ export default function Meta() {
         content={`The digital home of Adrian`}
       />
       <meta key="og:image" property="og:image" content={HOME_OG_IMAGE_URL} />
+      <script defer data-domain="adriankast.de" src="https://vps.adriankast.de/js/script.js"></script>
     </Head>
   );
 }
