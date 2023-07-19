@@ -35,7 +35,7 @@ Records are available since TypeScript 2.1 and you can read more about them in t
 
 In most modern browsers you can test XPath queries directly in the devtools. That means you can query the content of the website you have currently opened. XPath can often be handy e.g. for writing selectors in automated tests, when otherwise you don’t get some hard to query elements (for example with a CSS-Selector).
 
-In Chrome querying XPath from the browser is as simple as `$x('XpathQuery')` . So let’s say you want to get all `div` elements, here you go: `$x("//div")`.
+In Chrome querying XPath from the browser is as simple as `$x(XpathQuery)` . So let’s say you want to get all `div` elements, here you go: `$x("//div")`.
 
 Finding out about it has already saved me a lot of time.
 
