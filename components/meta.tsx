@@ -1,8 +1,10 @@
 import Head from "next/head";
 import { HOME_OG_IMAGE_URL } from "../lib/constants";
+import Script from "next/script"
 
 export default function Meta() {
   return (
+    <>
     <Head>
       <link
         rel="apple-touch-icon"
@@ -37,7 +39,8 @@ export default function Meta() {
         content={`The digital home of Adrian`}
       />
       <meta key="og:image" property="og:image" content={HOME_OG_IMAGE_URL} />
-      <script defer data-domain="adriankast.de" src="https://vps.adriankast.de/js/script.js"></script>
     </Head>
+    <Script defer src="https://vps.adriankast.de/js/script.js" data-domain="adriankast.de"/>
+    </>
   );
 }

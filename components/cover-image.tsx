@@ -29,7 +29,10 @@ export default function CoverImage({
       className={cn("shadow-sm", {
         "hover:shadow-md transition-shadow duration-200": slug,
       })}
-      layout="responsive"
+      style={{
+        width: '100%',
+        height: 'auto',
+      }}
       width={width}
       height={height}
       priority

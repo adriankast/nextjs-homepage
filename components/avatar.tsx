@@ -8,10 +8,9 @@ interface Props {
 export default function Avatar({ src, size }: Props) {
   return (
     <Image
-    src={src}
-    width={size}
-    height={size}
-    className="rounded-full"
-  />
+      src={src}
+      width={size}
+      height={size}
+      className="rounded-full" alt="Profile picture showing myself"  />
   )
 }
