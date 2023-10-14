@@ -25,8 +25,8 @@ export default function HeroPost ( {
           </div>
           <div>
             <h3 className="mb-4 text-3xl lg:text-5xl leading-tight">
-              <Link href={`/posts/${ slug }`}>
-                <a className="hover:underline">{title}</a>
+              <Link href={`/posts/${ slug }`} className="hover:underline">
+                {title}
               </Link>
             </h3>
             <div className="mb-4 md:mb-0 text-lg italic">
@@ -36,5 +36,5 @@ export default function HeroPost ( {
           </div>
         </div>
     </section>
-  )
+  );
 }

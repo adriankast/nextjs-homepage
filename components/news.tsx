@@ -8,8 +8,8 @@ export default function News() {
       <br />
       <span className="p-2">
         Read more about it{" "}
-        <Link href="/about">
-          <a className="underline hover:underline-offset-2">here</a>
+        <Link href="/about" className="underline hover:underline-offset-2">
+          here
         </Link>
       </span>
     </div>

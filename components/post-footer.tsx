@@ -28,14 +28,14 @@ export default function PostFooter({ source }: Props) {
         <ShareIcon />
         <CopyButton getText={getHref}>copy post URL</CopyButton>
         <CrossReferenceIcon />
-        <Link href={source}>
-          <a className="hover:underline" target="_blank">
+        <Link href={source} className="hover:underline" target="_blank">
+          
             comment this post on Notion
-          </a>
+          
         </Link>
         <ArrowLeftIcon />
-        <Link href="/posts">
-          <a className="hover:underline">back to all posts</a>
+        <Link href="/posts" className="hover:underline">
+          back to all posts
         </Link>
       </div>
     </div>

@@ -16,13 +16,13 @@ export default function Navlink({ children, path }: Props) {
 
   return (
     <div>
-      <Link href={path}>
-        <a
-          aria-disabled={disabled}
-          style={{textDecorationColor: disabled ? PRIMARY_COLOR : undefined}}
-        >
-          {children}
-        </a>
+      <Link
+        href={path}
+        aria-disabled={disabled}
+        style={{textDecorationColor: disabled ? PRIMARY_COLOR : undefined}}>
+
+        {children}
+
       </Link>
     </div>
   );
