@@ -17,4 +17,9 @@ for blog posts
 - Further styling
   - style blog footer
   - code style
+  - style about page
 - Inspect image width optimization & fix image resizing for cover-images
+- Unzip script:
+  - get cover image
+  - strip first lines (and whitespaces?) from meta data in .md file
+  - fix img urls by mappings them to assets/blog
