@@ -8,9 +8,9 @@ export default function About() {
         <title>About 🧐</title>
       </Head>
       <Container>
-        <main>
-          <h1>About</h1>
-            <h2 className="pt-4">this website:</h2>
+        <div className="flex justify-center">
+          <main className="w-fit">
+            <h1 className="pt-4">this website:</h1>
             <ul>
               <li>
                 built with <a href="https://nextjs.org/">Next.js</a>
@@ -35,32 +35,45 @@ export default function About() {
                 lives{" "}
                 <a href="https://github.com/adriankast/nextjs-homepage">here</a>
               </li>
-              <li>automatically deployed on git push, read more in <a href="https://adriankast.de/posts/website-publishing-workflow/">this post</a></li>
+              <li>
+                automatically deployed on git push, read more in{" "}
+                <a href="https://adriankast.de/posts/website-publishing-workflow/">
+                  this post
+                </a>
+              </li>
             </ul>
 
-            <h2 className="pt-4">me (I):</h2>
+            <h1 className="pt-4">me (I):</h1>
             <ul>
-              <li>
-                Like to tinker with tech - (M.Sc. Electrical Engineering &amp;
-                Information Technology)
-              </li>
+              <li>Love my wife 👫</li>
+              <li>Am a voluntary firefighter 👨‍🚒</li>
               <li>
                 Work as Software Engineer at{" "}
-                <a href="https://www.msg.group/">msg</a>
+                <a href="https://www.msg.group/" target="_blank">
+                  msg
+                </a>{" "}
+                👨‍💻
               </li>
-              <li>Love my fiancée</li>
-              <li>Am a voluntary firefighter</li>
-              <li>Am interested in company founding and indie hacking</li>
+              <li>Recently mostly write TypeScript &amp; Java 💻</li>
+              <li>Am interested in company founding &amp; indie hacking 🏭</li>
               <li>
-                Like many sports, e.g., biking, running, skiing, sailing,
-                fitness, sometimes tennis, ...
+                Like to tinker with tech - (Electrical Engineering &amp; IT{" "}
+                <a href="https://www.tum.de/" target="_blank">
+                  @TUM
+                </a>
+                ) 🎓
+              </li>
+              <li>
+                Like biking, running, skiing, sailing, fitness, sometimes
+                tennis, ... 🏃‍♂️
               </li>
               <li>
                 Would love to hear from you, contact methods are at the site
                 bottom 👇
               </li>
             </ul>
-        </main>
+          </main>
+        </div>
       </Container>
     </>
   );

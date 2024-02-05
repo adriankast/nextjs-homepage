@@ -24,11 +24,11 @@ export default function HeroPost ( {
             />
           </div>
           <div>
-            <h3 className="mb-4 text-3xl lg:text-5xl leading-tight">
+            <h2 className="mb-4 text-3xl lg:text-5xl leading-tight">
               <Link href={`/posts/${ slug }`} className="hover:underline">
                 {title}
               </Link>
-            </h3>
+            </h2>
             <div className="mb-4 md:mb-0 text-lg italic">
               <DateFormatter dateString={date} />
             </div>
