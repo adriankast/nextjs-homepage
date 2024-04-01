@@ -66,6 +66,7 @@ export function getProjectBySlug(slug) {
   const fullPath = join(projectsDirectory, `${realSlug}.json`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const projectData = JSON.parse(fileContents)
+  projectData.slug = realSlug;
 
   return projectData
 }

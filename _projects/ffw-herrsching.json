@@ -1,12 +1,5 @@
 {
   "name": "FFW Herrsching - Trau Dich",
   "description": "Die voll responsive Landing Page der \"Trau Dich\" Kampagne der Freiwilligen Feuerwehr Herrsching. Eine in ein existierendes Content Management System (Django CMS) integrierte Landing Page.",
-  "keypoints": [
-    "Content Management System: Wordpress",
-    "Dezente Gestaltung",
-    "Übersichtlichkeit",
-    "Responsive Gestaltung"
-  ],
-  "image": "",
   "url": "https://ffw-herrsching.de/traudich"
 }
