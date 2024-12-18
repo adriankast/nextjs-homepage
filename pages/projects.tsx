@@ -3,7 +3,16 @@ import Container from "../components/container";
 import { getAllProjects } from "../lib/api";
 import Image from "../components/Image";
 
-export default function Index({ allProjects }) {
+type Project = {
+  name: string;
+  slug: string;
+  url: string;
+  type?: string;
+  description?: string;
+  date: string;
+};
+
+export default function Index({ allProjects }: { allProjects: Project[] }) {
   return (
     <>
       <Head>
@@ -11,11 +20,13 @@ export default function Index({ allProjects }) {
       </Head>
       <Container>
         <div className="grid my-20 gap-10 justify-center">
-          {allProjects.map((project) => (
+          {allProjects
+            .sort(sortProjectsNewToOld)
+            .map((project) => (
             <a href={project.url} target="_blank" title={project.description}>
               <div
                 key={project.name}
-                className="border border-cyan rounded shadow-sm hover:shadow-xl"
+                className="border border-cyan rounded shadow-sm hover:shadow-xl flex flex-col justify-center"
               >
                 <h1 className="p-6 flex justify-center">{project.name}</h1>
                 <Image
@@ -25,6 +36,7 @@ export default function Index({ allProjects }) {
                   height={500}
                   alt={`${project.name} screenshot`}
                 />
+                <span className="self-end text-center bottom-1 right-1 bg-cyan text-white w-24">{project.type ?? "other"}</span>
               </div>
             </a>
           ))}
@@ -40,4 +52,10 @@ export async function getStaticProps() {
   return {
     props: { allProjects },
   };
+}
+
+function sortProjectsNewToOld(a: Project, b: Project): number {
+  const aDate = new Date(a.date);
+  const bDate = new Date(b.date);
+  return bDate.getTime() - aDate.getTime();
 }

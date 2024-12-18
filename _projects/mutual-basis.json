@@ -1,5 +1,7 @@
 {
-  "name": "MutualBasis GmbH",
-  "description": "Die neue Unternehmensrepräsentation für MutualBasis GmbH. Eine Website basierend auf dem Wordpress CMS, mit moderner Gestaltung.",
-  "url": "https://mutualbasis.de"
+  "name": "MutualBasis Website",
+  "description": "The new corporate representation for MutualBasis GmbH. A website based on the Wordpress CMS, with a modern design.",
+  "url": "https://mutualbasis.de",
+  "date": "2022-03-06",
+  "type": "Website"
 }
