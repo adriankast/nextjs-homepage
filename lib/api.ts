@@ -2,6 +2,8 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 
+
+// POSTS
 const postsDirectory = join(process.cwd(), '_posts')
 
 export function getPostSlugs() {
@@ -49,4 +51,30 @@ export function getAllPosts(fields = []) {
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   return posts
+}
+
+
+// PROJECTS
+const projectsDirectory = join(process.cwd(), '_projects')
+
+export function getProjectSlugs() {
+  return fs.readdirSync(projectsDirectory)
+}
+
+export function getProjectBySlug(slug) {
+  const realSlug = slug.replace(/\.json$/, '')
+  const fullPath = join(projectsDirectory, `${realSlug}.json`)
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const projectData = JSON.parse(fileContents)
+  projectData.slug = realSlug;
+
+  return projectData
+}
+
+export function getAllProjects() {
+  const slugs = getProjectSlugs()
+  const projects = slugs
+    .map((slug) => getProjectBySlug(slug))
+    // TODO: sort by order criterion
+  return projects
 }

@@ -1,0 +1,8 @@
+{
+    "name": "FF Agent Stats",
+    "description": "A proxy api that allows integrating mission count statistics of the FF-Agent application (third party app), e.g. via an Iframe. MIT licensed, available on GitHub.",
+    "url": "https://ff-agent-stats.vercel.app",
+    "date": "2024-12-18",
+    "type": "API"
+}
+  

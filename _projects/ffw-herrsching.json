@@ -1,0 +1,7 @@
+{
+  "name": "FFW Herrsching - \"Trau Dich\"",
+  "description": "The fully responsive landing page of the \"Trau Dich\" campaign of the Herrsching Volunteer Fire Brigade. A landing page integrated into an existing content management system (Django CMS).",
+  "url": "https://ffw-herrsching.de/traudich",
+  "date": "2020-01-01",
+  "type": "Website"
+}
