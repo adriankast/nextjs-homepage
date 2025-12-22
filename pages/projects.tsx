@@ -23,9 +23,8 @@ export default function Index({ allProjects }: { allProjects: Project[] }) {
           {allProjects
             .sort(sortProjectsNewToOld)
             .map((project) => (
-            <a href={project.url} target="_blank" title={project.description}>
+            <a href={project.url} target="_blank" title={project.description} key={project.name}>
               <div
-                key={project.name}
                 className="border border-cyan rounded shadow-sm hover:shadow-xl flex flex-col justify-center"
               >
                 <h1 className="p-6 flex justify-center">{project.name}</h1>

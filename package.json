@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "serve out -l 3000",
-    "lint": "next lint",
+    "lint": "eslint .",
     "unzip": "node ./scripts/unpackNewBlogPost.js"
   },
   "dependencies": {

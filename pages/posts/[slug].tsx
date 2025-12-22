@@ -28,7 +28,7 @@ export default function Post ( { post } )
             <article className="mb-32">
               <Head>
                 <title>
-                  {post.title} | Adrian's Blog
+                  {post.title} | Adrian&apos;s Blog
                 </title>
                 <meta key={"og:image"} property="og:image" content={post.ogImageUrl} />
                 <link href="/prism/prism-vs.css" rel="stylesheet" />
@@ -48,7 +48,7 @@ export default function Post ( { post } )
         )}
       </Container>
     </Layout>
-    <script src="/prism/prism.js"></script>
+    <script src="/prism/prism.js" async></script>
   </>
   )
 }
