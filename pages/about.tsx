@@ -45,7 +45,6 @@ export default function About() {
 
             <h1 className="pt-4">me (I):</h1>
             <ul>
-              <li>Love my wife 👫</li>
               <li>Am a voluntary firefighter 👨‍🚒</li>
               <li>
                 Work as Software Engineer at{" "}
