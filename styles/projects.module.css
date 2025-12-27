@@ -5,30 +5,36 @@
 
 .screenshotFrame {
   overflow: hidden;
+  height: 320px;
+  max-width: 500px;
+}
+
+.screenshotFrame :global(span) {
+  display: block !important;
 }
 
 .screenshotFrame :global(img) {
   opacity: 0.5;
   object-fit: cover;
   object-position: center top;
-  transform: scale(1);
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  transform: translateY(0) scale(1);
   transform-origin: top center;
-  will-change: transform, object-position;
+  will-change: transform;
   transition: opacity 200ms ease;
 }
 
 @keyframes projectScreenshotDrive {
   0% {
-    transform: scale(1);
-    object-position: center top;
+    transform: translateY(0) scale(1);
   }
   15% {
-    transform: scale(1.76);
-    object-position: center top;
+    transform: translateY(0) scale(1.96);
   }
   100% {
-    transform: scale(1.76);
-    object-position: center bottom;
+    transform: translateY(-80%) scale(1.96);
   }
 }
 
