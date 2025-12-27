@@ -2,6 +2,7 @@ import Head from "next/head";
 import Container from "../components/container";
 import { getAllProjects } from "../lib/api";
 import Image from "../components/Image";
+import styles from "../styles/projects.module.css";
 
 type Project = {
   name: string;
@@ -25,16 +26,18 @@ export default function Index({ allProjects }: { allProjects: Project[] }) {
             .map((project) => (
             <a href={project.url} target="_blank" title={project.description} key={project.name}>
               <div
-                className="border border-cyan rounded shadow-sm hover:shadow-xl flex flex-col justify-center"
+                className={`border border-cyan rounded shadow-sm hover:shadow-xl flex flex-col justify-center ${styles.card}`}
               >
                 <h1 className="p-6 flex justify-center">{project.name}</h1>
-                <Image
-                  className="opacity-50 hover:opacity-80 transition-all"
-                  src={`/assets/projects/${project.slug}.jpg`}
-                  width={500}
-                  height={500}
-                  alt={`${project.name} screenshot`}
-                />
+                <div className={styles.screenshotFrame}>
+                  <Image
+                    className="transition-opacity"
+                    src={`/assets/projects/${project.slug}.jpg`}
+                    width={500}
+                    height={500}
+                    alt={`${project.name} screenshot`}
+                  />
+                </div>
                 <span className="self-end text-center bottom-1 right-1 bg-cyan text-white w-24">{project.type ?? "other"}</span>
               </div>
             </a>

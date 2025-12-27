@@ -1,0 +1,40 @@
+.card:hover .screenshotFrame :global(img) {
+  opacity: 0.8;
+  animation: projectScreenshotDrive 7s linear forwards;
+}
+
+.screenshotFrame {
+  overflow: hidden;
+}
+
+.screenshotFrame :global(img) {
+  opacity: 0.5;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1);
+  transform-origin: top center;
+  will-change: transform, object-position;
+  transition: opacity 200ms ease;
+}
+
+@keyframes projectScreenshotDrive {
+  0% {
+    transform: scale(1);
+    object-position: center top;
+  }
+  15% {
+    transform: scale(1.76);
+    object-position: center top;
+  }
+  100% {
+    transform: scale(1.76);
+    object-position: center bottom;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover .screenshotFrame :global(img) {
+    animation: none;
+    transform: none;
+  }
+}

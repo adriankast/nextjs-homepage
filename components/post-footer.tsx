@@ -1,16 +1,9 @@
 import {
   ArrowLeftIcon,
-  CheckCircleIcon,
-  CircleIcon,
-  CopilotErrorIcon,
-  CopyIcon,
   CrossReferenceIcon,
-  KebabHorizontalIcon,
   ShareIcon,
-  XCircleIcon,
 } from "@primer/octicons-react";
 import Link from "next/link";
-import { useState } from "react";
 import CopyButton from "./copyButton";
 
 interface Props {
