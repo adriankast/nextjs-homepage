@@ -15,26 +15,27 @@ export default function NewsletterForm({ onSuccess, className = '' }: Newsletter
     setStatus('loading');
 
     try {
-      // Example implementation: You can replace this with your actual email service
-      // For now, we'll simulate an API call
-      const response = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (response.ok) {
-        setStatus('success');
-        setMessage('Thanks for subscribing!');
-        setEmail('');
-        if (onSuccess) {
-          onSuccess();
-        }
-      } else {
-        setStatus('error');
-        setMessage('Something went wrong. Please try again.');
+      // Example implementation using a form submission service
+      // This works with static sites. You can integrate with:
+      // 1. Formspree (https://formspree.io)
+      // 2. Netlify Forms
+      // 3. Basin (https://usebasin.com)
+      // 4. Mailchimp API directly
+      // 5. Any other email service API
+      
+      // For this example, we'll simulate success after a delay
+      // Replace this with your actual service integration
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Log to console for demonstration
+      console.log('Newsletter signup:', email);
+      
+      setStatus('success');
+      setMessage('Thanks for subscribing!');
+      setEmail('');
+      
+      if (onSuccess) {
+        onSuccess();
       }
     } catch {
       setStatus('error');
