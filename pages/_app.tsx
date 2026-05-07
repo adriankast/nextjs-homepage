@@ -1,6 +1,7 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Meta from "../components/meta";
+import NewsletterModal from "../components/newsletter-modal";
 import "../styles/index.css";
 
 export default function MyApp({ Component, pageProps }) {
@@ -15,6 +16,7 @@ export default function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
       <Footer />
+      <NewsletterModal />
     </>
   );
 }
