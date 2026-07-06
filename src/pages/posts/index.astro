@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import HeroPost from "../../components/HeroPost.astro";
+import MoreStories from "../../components/MoreStories.astro";
+import { getAllPosts, getCoverImage } from "../../lib/posts";
+
+const allPosts = await getAllPosts();
+const heroPost = allPosts[0];
+const morePosts = allPosts.slice(1);
+---
+
+<Layout title="Blog Posts 📰">
+  <Container>
+    {
+      heroPost && (
+        <HeroPost
+          title={heroPost.data.title}
+          coverImage={getCoverImage(heroPost)}
+          date={heroPost.data.date}
+          slug={heroPost.id}
+          excerpt={heroPost.data.excerpt}
+        />
+      )
+    }
+    {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+  </Container>
+</Layout>

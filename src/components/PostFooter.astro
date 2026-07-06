@@ -1,0 +1,69 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  source?: string;
+}
+
+const { source } = Astro.props;
+---
+
+<div class="max-w-4xl mx-auto font-bold">
+  <div class="grid gap-1 items-center" style="grid-template-columns: auto 1fr">
+    <Icon name="share" />
+    <span
+      id="copy-post-url"
+      class="underline underline-offset-4 hover:underline-offset-2 cursor-pointer"
+    >
+      <span class="mr-2">copy post URL</span>
+      <span data-copy-state="loading" hidden>
+        <Icon name="kebab-horizontal" />
+      </span>
+      <span data-copy-state="success" hidden>
+        <Icon name="check-circle" />
+      </span>
+      <span data-copy-state="failed" hidden>
+        <Icon name="x-circle" />
+      </span>
+    </span>
+    <Icon name="cross-reference" />
+    <a href={source} class="hover:underline" target="_blank">
+      comment this post on Notion
+    </a>
+    <Icon name="arrow-left" />
+    <a href="/posts/" class="hover:underline">back to all posts</a>
+  </div>
+</div>
+
+<script>
+  const button = document.getElementById("copy-post-url");
+
+  const setCopyState = (state: string) => {
+    button
+      ?.querySelectorAll<HTMLElement>("[data-copy-state]")
+      .forEach((el) => {
+        el.hidden = el.dataset.copyState !== state;
+      });
+  };
+
+  const resetCopyState = () => {
+    setTimeout(() => {
+      setCopyState("");
+    }, 2000);
+  };
+
+  button?.addEventListener("click", () => {
+    if (!navigator?.clipboard) return;
+    setCopyState("loading");
+    navigator.clipboard.writeText(window.location.href).then(
+      () => {
+        setCopyState("success");
+        resetCopyState();
+      },
+      () => {
+        setCopyState("failed");
+        resetCopyState();
+      }
+    );
+  });
+</script>

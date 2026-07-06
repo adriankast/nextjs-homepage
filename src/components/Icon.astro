@@ -1,0 +1,26 @@
+---
+import octicons from "@primer/octicons";
+
+interface Props {
+  name: string;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 16, class: className } = Astro.props;
+
+// Match the rendering of @primer/octicons-react: currentColor fill and
+// text-bottom alignment (the react package sets these inline).
+const attributes: Record<string, string | number> = {
+  width: size,
+  fill: "currentColor",
+  style:
+    "display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible",
+};
+if (className) {
+  attributes.class = `octicon octicon-${name} ${className}`;
+}
+const svg = octicons[name].toSVG(attributes);
+---
+
+<Fragment set:html={svg} />

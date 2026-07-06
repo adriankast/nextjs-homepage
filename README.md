@@ -2,8 +2,8 @@
 
 ## About
 
-- built with [Next.js](https://nextjs.org/)
-- [this template](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
+- built with [Astro](https://astro.build/)
+- originally based on [this template](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
 - [notion](https://www.notion.so/) and manual markdown export
 for blog posts
 - [prism](https://prismjs.com/) for code highlighting

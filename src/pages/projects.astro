@@ -1,0 +1,86 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+
+const allProjects = (await getCollection("projects")).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<Layout title="Projects 🛠">
+  <Container>
+    <div class="grid my-20 gap-10 justify-center">
+      {
+        allProjects.map((project) => (
+          <a
+            href={project.data.url}
+            target="_blank"
+            title={project.data.description}
+          >
+            <div class="card border border-cyan rounded shadow-sm hover:shadow-xl flex flex-col justify-center">
+              <h1 class="p-6 flex justify-center">{project.data.name}</h1>
+              <div class="screenshot-frame">
+                <img
+                  class="transition-opacity"
+                  src={`/assets/projects/${project.id}.jpg`}
+                  width={500}
+                  height={500}
+                  alt={`${project.data.name} screenshot`}
+                />
+              </div>
+              <span class="self-end text-center bottom-1 right-1 bg-cyan text-white w-24">
+                {project.data.type ?? "other"}
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .card:hover .screenshot-frame img {
+    opacity: 0.8;
+    animation: projectScreenshotDrive 7s linear forwards;
+  }
+
+  .screenshot-frame {
+    overflow: hidden;
+    height: 320px;
+    max-width: 500px;
+  }
+
+  .screenshot-frame img {
+    opacity: 0.5;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: translateY(0) scale(1);
+    transform-origin: top center;
+    will-change: transform;
+    transition: opacity 200ms ease;
+  }
+
+  @keyframes projectScreenshotDrive {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    15% {
+      transform: translateY(0) scale(1.96);
+    }
+    100% {
+      transform: translateY(-80%) scale(1.96);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card:hover .screenshot-frame img {
+      animation: none;
+      transform: none;
+    }
+  }
+</style>

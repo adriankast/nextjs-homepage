@@ -1,0 +1,37 @@
+---
+import CoverImage from "./CoverImage.astro";
+import DateFormatter from "./DateFormatter.astro";
+
+interface Props {
+  title: string;
+  coverImage: string;
+  date: string;
+  excerpt?: string;
+  slug: string;
+}
+
+const { title, coverImage, date, excerpt, slug } = Astro.props;
+---
+
+<section>
+  <div class="grid gap-4 lg:grid-cols-2 grid-cols-1 mb-40 mt-40">
+    <div>
+      <CoverImage
+        title={title}
+        src={coverImage}
+        slug={slug}
+        height={620}
+        width={1240}
+      />
+    </div>
+    <div>
+      <h2 class="mb-4 text-3xl lg:text-5xl leading-tight">
+        <a href={`/posts/${slug}/`} class="hover:underline">{title}</a>
+      </h2>
+      <div class="mb-4 md:mb-0 text-lg italic">
+        <DateFormatter dateString={date} />
+      </div>
+      <p class="text-lg leading-relaxed mb-4">{excerpt}</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+---
+import Avatar from "./Avatar.astro";
+import Icon from "./Icon.astro";
+import SocialLink from "./SocialLink.astro";
+---
+
+<div class="flex gap-1 bg-gray-200 rounded-full w-max">
+  <div class="w-16 h-16 rounded-full border-4">
+    <Avatar src="/assets/profile/adrian.jpg" size={64} />
+  </div>
+  <div class="flex items-center z-10">
+    <SocialLink title="Write a mail" link="mailto:info@adriankast.de">
+      <Icon name="mail" size={16} />
+    </SocialLink>
+    <SocialLink title="Give me a call" link="tel:+4915678673195">
+      <Icon name="device-mobile" size={16} />
+    </SocialLink>
+    <SocialLink title="Code on Github" link="https://github.com/adriankast">
+      <Icon name="mark-github" size={16} />
+    </SocialLink>
+    <SocialLink
+      title="Connect via LinkedIn"
+      link="https://www.linkedin.com/in/adriankast/"
+    >
+      <img
+        src="/assets/icons/linked-in.png"
+        width={20}
+        height={16}
+        alt="LinkedIN Logo"
+        style="margin-right: -2px"
+      />
+    </SocialLink>
+  </div>
+</div>

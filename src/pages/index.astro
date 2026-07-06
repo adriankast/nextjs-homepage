@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import News from "../components/News.astro";
+import { PRIMARY_COLOR } from "../lib/constants";
+---
+
+<Layout title="Welcome 👋">
+  <div class="grid justify-center h-full items-center">
+    <div
+      id="content-box"
+      class="border-2 font-extrabold font-sans m-4 border-black -ml-96 opacity-0"
+      style="transition: ease-in-out 2s opacity, ease-in-out 2s margin-left"
+    >
+      <div class="border-4 border-black" style={`border-color: ${PRIMARY_COLOR}`}>
+        <div class="border-2 border-black p-4 rounded">
+          Hi, I share learnings in programming, indie-hacking and sports
+          <News />
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  setTimeout(() => {
+    const contentBox = document.getElementById("content-box");
+    contentBox?.classList.remove("opacity-0", "-ml-96");
+  }, 100);
+</script>

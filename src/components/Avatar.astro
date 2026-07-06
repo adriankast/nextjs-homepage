@@ -1,0 +1,16 @@
+---
+interface Props {
+  src: string;
+  size: number;
+}
+
+const { src, size } = Astro.props;
+---
+
+<img
+  src={src}
+  width={size}
+  height={size}
+  class="rounded-full"
+  alt="Profile picture showing myself"
+/>

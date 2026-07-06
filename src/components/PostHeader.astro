@@ -1,0 +1,33 @@
+---
+import CoverImage from "./CoverImage.astro";
+import DateFormatter from "./DateFormatter.astro";
+import PostTitle from "./PostTitle.astro";
+
+interface Props {
+  title: string;
+  coverImage: string;
+  date: string;
+  coverImageInfo?: string;
+  coverImageUrl?: string;
+}
+
+const { title, coverImage, date, coverImageInfo, coverImageUrl } = Astro.props;
+---
+
+<PostTitle>{title}</PostTitle>
+<div class="mb-8 md:mb-16 sm:mx-0">
+  <CoverImage
+    title={title}
+    src={coverImage}
+    height={620}
+    width={1240}
+    slug={false}
+    srcInfo={coverImageInfo}
+    srcUrl={coverImageUrl}
+  />
+</div>
+<div class="max-w-4xl mx-auto">
+  <div class="mb-6 text-lg italic">
+    <DateFormatter dateString={date} />
+  </div>
+</div>

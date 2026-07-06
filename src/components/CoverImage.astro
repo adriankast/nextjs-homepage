@@ -1,0 +1,54 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  title: string;
+  src: string;
+  slug: string | false;
+  height: number;
+  width: number;
+  srcInfo?: string;
+  srcUrl?: string;
+}
+
+const { title, src, slug, height, width, srcInfo, srcUrl } = Astro.props;
+
+const imageClass = slug
+  ? "shadow-sm hover:shadow-md transition-shadow duration-200"
+  : "shadow-sm";
+---
+
+<div class="sm:mx-0">
+  {
+    slug ? (
+      <a href={`/posts/${slug}/`} aria-label={title}>
+        <img
+          src={src}
+          alt={`Cover Image for ${title}`}
+          class={imageClass}
+          style="width: 100%; height: auto"
+          width={width}
+          height={height}
+        />
+      </a>
+    ) : (
+      <img
+        src={src}
+        alt={`Cover Image for ${title}`}
+        class={imageClass}
+        style="width: 100%; height: auto"
+        width={width}
+        height={height}
+      />
+    )
+  }
+  {
+    (srcInfo || srcUrl) && (
+      <a href={srcUrl} title={srcInfo} target="_blank">
+        <div style="width: 100%; display: flex; flex-direction: row-reverse; margin-top: -20px; margin-left: -4px; position: relative">
+          <Icon name="info" class="bg-white rounded-full" />
+        </div>
+      </a>
+    )
+  }
+</div>

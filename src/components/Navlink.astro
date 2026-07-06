@@ -1,0 +1,21 @@
+---
+import { PRIMARY_COLOR } from "../lib/constants";
+
+interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+const normalize = (p: string) => (p === "/" ? p : p.replace(/\/$/, ""));
+const disabled = normalize(path) === normalize(Astro.url.pathname);
+---
+
+<div>
+  <a
+    href={path}
+    aria-disabled={disabled}
+    style={disabled ? `text-decoration-color: ${PRIMARY_COLOR}` : undefined}
+  >
+    <slot />
+  </a>
+</div>

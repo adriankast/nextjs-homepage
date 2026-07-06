@@ -1,0 +1,54 @@
+---
+import { render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PostHeader from "../../components/PostHeader.astro";
+import PostFooter from "../../components/PostFooter.astro";
+import {
+  getAllPosts,
+  getCoverImage,
+  getOgImageUrl,
+  type Post,
+} from "../../lib/posts";
+import "../../styles/markdown.css";
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={`${post.data.title} | Adrian's Blog`} ogImage={getOgImageUrl(post)}>
+  <Fragment slot="head">
+    <link href="/prism/prism-vs.css" rel="stylesheet" />
+    <link href="/prism/prismMenu.css" rel="stylesheet" />
+  </Fragment>
+  <Container>
+    <article class="mb-32">
+      <PostHeader
+        title={post.data.title}
+        coverImage={getCoverImage(post)}
+        date={post.data.date}
+        coverImageInfo={post.data.coverImageInfo}
+        coverImageUrl={post.data.coverImageUrl}
+      />
+      <div class="max-w-4xl mx-auto">
+        <div class="markdown">
+          <Content />
+        </div>
+      </div>
+      <PostFooter source={post.data.source} />
+    </article>
+  </Container>
+  <script is:inline src="/prism/prism.js" async></script>
+</Layout>
