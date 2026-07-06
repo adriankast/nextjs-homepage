@@ -1,0 +1,84 @@
+---
+import { BREVO_FORM_URL } from "../lib/constants";
+---
+
+{
+  BREVO_FORM_URL && (
+    <div class="flex justify-center lg:justify-start mb-16">
+      <form
+        id="newsletter-form"
+        method="POST"
+        action={BREVO_FORM_URL}
+        class="border-2 border-black p-4 rounded bg-white max-w-md"
+      >
+        <label for="newsletter-email" class="font-bold block mb-2">
+          📬 New posts by mail
+        </label>
+        <div class="flex gap-2">
+          <input
+            type="email"
+            id="newsletter-email"
+            name="EMAIL"
+            required
+            placeholder="you@example.com"
+            autocomplete="email"
+            class="border border-black rounded px-2 py-1 flex-1 min-w-0"
+          />
+          <button
+            type="submit"
+            class="bg-cyan border border-black rounded px-3 py-1 font-bold hover:shadow-md"
+          >
+            Subscribe
+          </button>
+        </div>
+        {/* Brevo honeypot field, must stay empty */}
+        <div style="display: none">
+          <input
+            type="text"
+            name="email_address_check"
+            value=""
+            tabindex="-1"
+            autocomplete="off"
+          />
+        </div>
+        <input type="hidden" name="locale" value="en" />
+        <p class="text-sm mt-2 mb-0">
+          An email when there is a new post, nothing else. Double opt-in,
+          unsubscribe anytime — details in the{" "}
+          <a href="/privacy/">privacy policy</a>.
+        </p>
+        <p data-newsletter-message hidden class="text-sm font-bold mt-2 mb-0" />
+      </form>
+    </div>
+  )
+}
+
+<script>
+  // Progressive enhancement: submit via fetch for an inline confirmation.
+  // On any failure fall back to the native form POST to Brevo.
+  const form = document.getElementById(
+    "newsletter-form"
+  ) as HTMLFormElement | null;
+  const message = form?.querySelector<HTMLElement>(
+    "[data-newsletter-message]"
+  );
+
+  form?.addEventListener("submit", async (event) => {
+    if (!message) return;
+    event.preventDefault();
+    try {
+      const response = await fetch(`${form.action}?isAjax=1`, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      if (!response.ok) throw new Error(`status ${response.status}`);
+      message.textContent =
+        "Almost there — check your inbox and confirm your subscription. ✅";
+      message.hidden = false;
+      form.querySelector<HTMLInputElement>("input[name='EMAIL']")!.value = "";
+    } catch {
+      form.submit();
+    }
+  });
+</script>

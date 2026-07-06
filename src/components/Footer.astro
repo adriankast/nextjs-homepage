@@ -1,26 +1,28 @@
 ---
 import Container from "./Container.astro";
+import NewsletterSignup from "./NewsletterSignup.astro";
 import SocialConnect from "./SocialConnect.astro";
 ---
 
 <footer class="bg-accent-1 border-t border-accent-2 w-screen md:w-full">
   <Container>
-    <div
-      class="py-28 flex flex-col lg:flex-row items-center mr-4 ml-4 lg:mx-auto lg:my-auto lg:w-1/2"
-    >
-      <div class="text-center lg:text-left mb-10 lg:mb-0 lg:pr-4">
-        <SocialConnect />
-      </div>
-      <div
-        class="flex flex-col lg:flex-row justify-center items-center lg:pl-4"
-      >
-        <span class="mx-3 font-bold hover:underline">
-          <a href="/imprint/">Imprint</a>
-        </span>
-        <span class="mx-3 font-bold text-xl">x</span>
-        <span class="mx-3 font-bold hover:underline">
-          <a href="/privacy/">Privacy</a>
-        </span>
+    <div class="py-28 mr-4 ml-4 lg:mx-auto lg:my-auto lg:w-1/2">
+      <NewsletterSignup />
+      <div class="flex flex-col lg:flex-row items-center">
+        <div class="text-center lg:text-left mb-10 lg:mb-0 lg:pr-4">
+          <SocialConnect />
+        </div>
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center lg:pl-4"
+        >
+          <span class="mx-3 font-bold hover:underline">
+            <a href="/imprint/">Imprint</a>
+          </span>
+          <span class="mx-3 font-bold text-xl">x</span>
+          <span class="mx-3 font-bold hover:underline">
+            <a href="/privacy/">Privacy</a>
+          </span>
+        </div>
       </div>
     </div>
   </Container>
