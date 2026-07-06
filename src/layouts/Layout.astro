@@ -49,11 +49,6 @@ const { title, ogImage = HOME_OG_IMAGE_URL } = Astro.props;
     <meta name="description" content="The digital home of Adrian" />
     <meta property="og:image" content={ogImage} />
     <slot name="head" />
-    <script
-      is:inline
-      defer
-      src="https://vps.adriankast.de/js/script.js"
-      data-domain="adriankast.de"></script>
   </head>
   <body>
     <div class="grid min-h-screen" style="grid-template-rows: auto 1fr">
