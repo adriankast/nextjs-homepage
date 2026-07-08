@@ -20,7 +20,9 @@ jobs:
         SSHPASS: ${{ secrets.SFTP_PASS }}
         SFTP_HOST: ${{ secrets.SFTP_HOST }}
         SSH_SERVER: ${{ secrets.SSH_SERVER }}
-      run: mkdir ~/.ssh && sshpass -e ssh-keyscan -H "$SSH_SERVER" >> ~/.ssh/known_hosts
+      # Single key type = single connection; Strato temp-blocks IPs that
+      # open several unauthenticated connections in a row.
+      run: mkdir ~/.ssh && ssh-keyscan -H -t ed25519 "$SSH_SERVER" >> ~/.ssh/known_hosts
       
     - name: Checkout repo
       uses: actions/checkout@v3
@@ -41,4 +43,13 @@ jobs:
         SFTP_HOST: ${{ secrets.SFTP_HOST }}
         SSHPASS: ${{ secrets.SFTP_PASS }}
         SSH_SERVER: ${{ secrets.SSH_SERVER}}
-      run: cd $GITHUB_WORKSPACE/dist && sshpass -e sftp "$SFTP_HOST@$SSH_SERVER" <<< $"put -r . ./"
+      # Retry with waits: Strato blocks the IP for a few minutes after the
+      # keyscan connections above, and the Astro build is too fast to outlast it.
+      run: |
+        cd $GITHUB_WORKSPACE/dist
+        for attempt in 1 2 3 4; do
+          sshpass -e sftp "$SFTP_HOST@$SSH_SERVER" <<< $"put -r . ./" && exit 0
+          echo "sftp attempt $attempt failed, waiting 90s before retry"
+          sleep 90
+        done
+        exit 1
